@@ -1,7 +1,8 @@
-require ( './helpers.js' );
-
+// Import the classes to test
 const { expect } = require("chai");
+const { Breakfast, Lunch, Dinner } = require("./index");
 
+// Write the tests
 describe("breakfast", () => {
   it("has a class of breakfast", () => {
     expect(new Breakfast()).to.be.an.instanceof(Breakfast);
@@ -43,6 +44,6 @@ describe("dinner", () => {
     expect(newdinner.salad).to.equal("balsamic salad");
     expect(newdinner.soup).to.equal("consomme");
     expect(newdinner.entree).to.equal("filet mignon");
-    // since #dessert is a private field, we can't test for its value! We'll trust that you added it ;)
+    // Since #dessert is a private field, we can't test for its value
   });
 });
